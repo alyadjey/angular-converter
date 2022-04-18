@@ -1,0 +1,14 @@
+<converter-header [title]="titleUSD + ' ГРН К ДОЛЛАРУ'"> </converter-header>
+<converter-header [title]="titleEUR + ' ГРН К ЕВРО'"></converter-header>
+<select [(ngModel)]="select" (change)="count()">
+  <option *ngFor="let c of currencies" [ngValue]="c">{{ c }}</option>
+</select>
+
+<input name="inputA" [(ngModel)]="intA" (change)="count()" />
+<br />
+<br />
+<select [(ngModel)]="select2" (change)="count()">
+  <option *ngFor="let c of currencies" [ngValue]="">{{ c }}</option>
+</select>
+
+<input name="inputB" [(ngModel)]="intB" (change)="count()" disabled />
